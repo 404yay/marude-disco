@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>まるでディスコだな｜本物紹介</title>
+<meta name="description" content="まるでディスコだな｜本物紹介。1代目から7代目までのメンバー紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#020604;
+    --panel:#04120a;
+    --panel2:#061a0f;
+    --line:#14532d;
+    --grn:#33ff66;
+    --grn-dim:#1d9e4b;
+    --cyn:#39e6ff;
+    --amb:#ffbf39;
+    --mag:#ff4fd8;
+    --red:#ff5347;
+    --txt:#d8ffe2;
+    --muted:#6fae7f;
+    --mono:"Share Tech Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);color:var(--txt);
+    font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    font-weight:500;line-height:1.85;overflow-x:hidden;
+  }
+  #rain{position:fixed;inset:0;z-index:-2;opacity:.15}
+  .scan{position:fixed;inset:0;z-index:60;pointer-events:none;
+    background:repeating-linear-gradient(0deg, rgba(0,0,0,.16) 0 1px, transparent 1px 3px);}
+  .vig{position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 30%, transparent 55%, rgba(0,0,0,.55) 100%);}
+  .wrap{max-width:860px;margin:0 auto;padding:44px 20px 70px}
+
+  /* ===== hero ===== */
+  .boot{font-family:var(--mono);font-size:13px;color:var(--grn-dim);line-height:1.9;white-space:pre-wrap}
+  .boot .ok{color:var(--grn)}
+  .boot .cmt{color:#3f6b4d}
+
+  /* hand-kept personal-site furniture */
+  .counter{display:flex;align-items:center;gap:10px;margin-top:18px;font-family:var(--mono);font-size:13px;color:var(--grn-dim);flex-wrap:wrap}
+  .digits{display:inline-flex;gap:3px}
+  .digits i{font-style:normal;font-family:var(--mono);font-size:16px;color:var(--grn);background:#02140a;
+    border:1px solid var(--line);padding:1px 6px;box-shadow:inset 0 0 8px rgba(51,255,102,.25)}
+  .ls{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-top:34px;line-height:2;white-space:pre-wrap}
+  .ls b{font-weight:400}
+  .newbadge{font-family:var(--mono);font-size:12px;color:#0a0f0a;background:var(--amb);padding:1px 8px;letter-spacing:.1em;animation:blink 1.1s steps(1) infinite}
+  .log{margin-top:52px;border:1px solid var(--line);background:rgba(0,0,0,.3);padding:18px 22px}
+  .log h3{font-family:var(--mono);font-weight:400;font-size:15px;color:var(--grn);margin-bottom:10px}
+  .log ul{list-style:none;font-family:var(--mono);font-size:13.5px;color:var(--muted);line-height:2.1}
+  .log li b{color:var(--grn);font-weight:400;margin-right:10px}
+  .bar .size{margin-left:auto;color:#4c7a5c;white-space:nowrap}
+  header{text-align:left;margin-top:26px;position:relative}
+  .ball{font-size:44px;display:inline-block;filter:drop-shadow(0 0 14px rgba(51,255,102,.55)) saturate(1.2)}
+  h1{
+    font-weight:900;font-size:clamp(40px,8vw,64px);line-height:1.25;margin-top:10px;letter-spacing:.01em;
+    color:var(--txt);text-shadow:0 0 18px rgba(51,255,102,.35);
+  }
+  h1 .neon{color:var(--grn);text-shadow:0 0 8px rgba(51,255,102,.8), 0 0 30px rgba(51,255,102,.5), 0 0 80px rgba(51,255,102,.35)}
+  .glitch{position:relative;display:inline-block}
+  .glitch::before,.glitch::after{content:attr(data-text);position:absolute;inset:0;overflow:hidden;opacity:0}
+  .glitch::before{color:var(--cyn);animation:gl1 3.4s steps(1) infinite}
+  .glitch::after{color:var(--mag);animation:gl2 3.4s steps(1) infinite}
+  @keyframes gl1{0%,91%,100%{opacity:0;transform:none;clip-path:inset(0 0 0 0)}
+    92%{opacity:.85;transform:translate(-3px,1px);clip-path:inset(12% 0 58% 0)}
+    94%{opacity:.85;transform:translate(3px,-1px);clip-path:inset(62% 0 8% 0)}
+    96%{opacity:0}}
+  @keyframes gl2{0%,91%,100%{opacity:0;transform:none;clip-path:inset(0 0 0 0)}
+    93%{opacity:.85;transform:translate(3px,0);clip-path:inset(38% 0 32% 0)}
+    95%{opacity:.85;transform:translate(-3px,1px);clip-path:inset(4% 0 82% 0)}
+    97%{opacity:0}}
+  .sub{color:var(--muted);margin-top:12px;font-size:15.5px;font-weight:700}
+  .meta{font-family:var(--mono);font-size:13.5px;color:var(--grn-dim);margin-top:16px;line-height:2}
+  .meta b{color:var(--grn);font-weight:400}
+  .cursor{display:inline-block;width:9px;height:1.05em;background:var(--grn);vertical-align:text-bottom;animation:blink 1s steps(1) infinite;box-shadow:0 0 8px rgba(51,255,102,.8)}
+  @keyframes blink{50%{opacity:0}}
+
+  .ticker{overflow:hidden;margin:36px -20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:6px 0;background:rgba(51,255,102,.04)}
+  .ticker div{display:inline-block;white-space:nowrap;font-family:var(--mono);font-size:14px;color:var(--grn-dim);animation:tick 28s linear infinite}
+  .ticker b{color:var(--grn);font-weight:400}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ===== member terminals ===== */
+  .members{display:grid;gap:26px;margin-top:40px}
+  .card{
+    position:relative;background:linear-gradient(180deg, var(--panel2), var(--panel));
+    border:1px solid var(--line);
+    box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 14px 34px rgba(0,0,0,.5), inset 0 0 42px rgba(51,255,102,.03);
+    transition:border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  }
+  .card::before,.card::after{content:"";position:absolute;width:14px;height:14px;border:2px solid var(--ac,var(--grn));z-index:2}
+  .card::before{top:-2px;left:-2px;border-right:none;border-bottom:none}
+  .card::after{bottom:-2px;right:-2px;border-left:none;border-top:none}
+  .card:hover{transform:translateY(-3px);border-color:var(--ac,var(--grn));
+    box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 18px 40px rgba(0,0,0,.55), 0 0 30px var(--glow,rgba(51,255,102,.18))}
+  .bar{
+    display:flex;align-items:center;gap:8px;padding:8px 14px;
+    border-bottom:1px solid var(--line);background:rgba(0,0,0,.35);
+    font-family:var(--mono);font-size:12.5px;color:var(--muted);
+  }
+  .bar .dot{width:10px;height:10px;border-radius:50%;background:#20402c;flex:none}
+  .bar .dot.r{background:#5c2320}.bar .dot.y{background:#5c4d20}.bar .dot.g{background:#1d5c33}
+  .bar .path{margin-left:6px;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .inner{padding:20px 24px 22px;position:relative;overflow:hidden}
+  .ghost{
+    position:absolute;right:6px;bottom:-38px;font-family:var(--mono);font-size:170px;line-height:1;
+    color:transparent;-webkit-text-stroke:1.5px var(--ac,var(--grn));opacity:.13;pointer-events:none;user-select:none;
+  }
+  .cmd{font-family:var(--mono);font-size:13.5px;color:var(--grn-dim)}
+  .cmd .u{color:var(--cyn)}
+  .card h2{font-size:24px;font-weight:900;margin-top:6px;display:flex;align-items:center;gap:11px;flex-wrap:wrap;position:relative}
+  .card h2 .gen{font-family:var(--mono);font-weight:400;color:var(--ac,var(--grn));font-size:21px}
+  .chip{font-family:var(--mono);font-size:12.5px;padding:2px 9px;border:1px solid var(--ac,var(--grn));color:var(--ac,var(--grn));letter-spacing:.08em}
+  .chip.off{border-color:#3c5a46;color:#7d9a89}
+  .card p.body{white-space:pre-line;color:var(--txt);font-size:15.5px;margin-top:10px;position:relative}
+  .endline{font-family:var(--mono);font-size:12.5px;color:var(--grn-dim);margin-top:14px}
+  .c1{--ac:#ff5da2;--glow:rgba(255,93,162,.25)}
+  .c2{--ac:#ff4444;--glow:rgba(255,68,68,.28)}
+  .c3{--ac:#4f7cff;--glow:rgba(79,124,255,.3)}
+  .c4{--ac:#a55eff;--glow:rgba(165,94,255,.32)}
+  .c5{--ac:#ff2d2d;--glow:rgba(255,45,45,.28)}
+  .c6{--ac:#f2f2f2;--glow:rgba(242,242,242,.22)}
+  .c7{--ac:#38b6ff;--glow:rgba(56,182,255,.32)}
+  .gone{filter:saturate(.45) brightness(.9)}
+  .gone .body{color:#b9cdbf}
+  .ace{border-color:var(--ac);box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 14px 34px rgba(0,0,0,.5), 0 0 34px var(--glow)}
+
+  footer{margin-top:58px;font-family:var(--mono);font-size:13px;color:var(--grn-dim);line-height:2;text-align:left}
+  footer .skull{font-size:20px}
+  footer b{color:var(--grn);font-weight:400}
+
+  @media (prefers-reduced-motion: reduce){
+    .glitch::before,.glitch::after,.ticker div,.cursor{animation:none}
+    #rain{display:none}
+  }
+</style>
+</head>
+<body>
+<canvas id="rain"></canvas>
+<div class="vig"></div>
+<div class="scan"></div>
+
+<div class="wrap">
+  <div class="boot"><span class="cmt">// marude-disco.sys — no template. all hand-coded.</span>
+&gt; boot marude-disco.sys ............ <span class="ok">[ OK ]</span>
+&gt; loading members .................. <span class="ok">[ 7 FOUND ]</span>
+&gt; fake accounts .................... <span class="ok">[ 0 ]</span>
+&gt; status ........................... <span class="ok">ALL REAL</span></div>
+
+  <header>
+    <span class="ball">🪩</span>
+    <h1>まるで<span class="neon glitch" data-text="ディスコ">ディスコ</span>だな<br>｜本物紹介</h1>
+    <p class="sub">1代目から7代目まで、本物だけを紹介する。</p>
+    <div class="meta">DOMAIN : <b>まるでディスコだな.com</b><br>
+    UPDATED : <b>2026.11.24</b> <span class="cursor"></span></div>
+    <div class="counter">ACCESS COUNTER : <span class="digits"><i>0</i><i>0</i><i>0</i><i>4</i><i>0</i><i>4</i></span> — あなたは 404 人目の訪問者です</div>
+    <div class="ticker"><div>root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b>&nbsp;</div></div>
+  </header>
+
+  <div class="ls">$ ls -la ~/members/
+drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
+-rw-r--r--  1 root root  187 Nov 24 21:58 <b style="color:#ff5da2">01_shodai.txt</b>
+-rw-r--r--  1 root root  342 Nov 24 21:58 <b style="color:#ff4444">02_negami.txt</b>
+-rw-r--r--  1 root root  226 Nov 24 23:02 <b style="color:#4f7cff">03_al.txt</b>
+-rw-r--r--  1 root root  298 Nov 24 21:58 <b style="color:#a55eff">04_404.txt</b>
+-rw-r--r--  1 root root  365 Nov 24 21:58 <b style="color:#ff2d2d">05_rei.txt</b>
+-rw-r--r--  1 root root  388 Nov 24 21:58 <b style="color:#f2f2f2">06_kagekiha.txt</b>
+-rw-r--r--  1 root root   42 Nov 24 22:55 <b style="color:#38b6ff">07_frost.txt</b> <span style="color:var(--amb)">&lt;- NEW</span></div>
+
+  <main class="members">
+
+    <section class="card c1 gone">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/01_shodai.txt</span><span class="size">187 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">1</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 01_shodai.txt</div>
+        <h2><span class="gen">01</span>1代目｜初代 <span class="chip off">[ 行方不明 ]</span></h2>
+        <p class="body">こいつは現在行方不明。
+どこに行ったのか誰も知らない。
+消息不明、連絡不明、存在感不明。
+初代なのにログイン率が伝説級。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c2">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/02_negami.txt</span><span class="size">342 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">2</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 02_negami.txt</div>
+        <h2><span class="gen">02</span>2代目｜ねがみ <span class="chip">[ 現役 ]</span></h2>
+        <p class="body">こいつはわがまま。
+なんか変。でもいいやつなのはわかる。
+最近「プログラミング頑張ってる」とか言ってるけど、普通にサボってる説ある。
+口ではプログラマー、行動はニート。
+そろそろ本気出せｗｗｗ</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c3">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/03_al.txt</span><span class="size">226 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">3</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 03_al.txt</div>
+        <h2><span class="gen">03</span>3代目｜AL <span class="chip">[ 現役 ]</span></h2>
+        <p class="body">こいつはめちゃいいやつで根性ある。
+なんかあったらすぐ喧嘩するけどね。
+クソいい身内や。
+まるでディスコだなをバカにする奴いたらすぐ守ってくれる。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c4">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/04_404.txt</span><span class="size">298 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">4</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 04_404.txt</div>
+        <h2><span class="gen">04</span>4代目｜404 <span class="chip">[ 作成者 ]</span></h2>
+        <p class="body">今回の音楽Botの作成者。
+ほかにもいろんなツールを作ってる。
+まあ、できる方。
+なんだかんだ仕事はする。
+バグが出たら？ とりあえず直す。
+直らなかったら？ 泣きながら直す。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c5 gone">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/05_rei.txt</span><span class="size">365 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">5</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 05_rei.txt</div>
+        <h2><span class="gen">05</span>5代目｜れい <span class="chip off">[ 現在いなくなった ]</span></h2>
+        <p class="body">こいつはマジで最高。
+クソクソいいやつ。性格よし、実力よし。
+しかもプログラミングができる。
+JavaとJavaScriptがメインらしい。
+こいつがいなかったら終わってた説ある。
+欠点を探す方が難しい。たぶん。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c6">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/06_kagekiha.txt</span><span class="size">388 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">6</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 06_kagekiha.txt</div>
+        <h2><span class="gen">06</span>6代目｜過激派 <span class="chip">[ 現役 ]</span></h2>
+        <p class="body">現在プログラミング勉強中。
+めちゃくちゃ頑張り屋で根性がある。
+努力できるのは普通にすごい。
+ただし、たまにバカみたいなことをする。
+VALORANTが大好き。
+プログラミングの勉強も頑張れ。
+あと、たまには脳みそも起動してください。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+    <section class="card c7 ace">
+      <div class="bar"><span class="dot r"></span><span class="dot y"></span><span class="dot g"></span><span class="path">~/members/07_frost.txt</span><span class="size">42 bytes</span></div>
+      <div class="inner">
+        <div class="ghost">7</div>
+        <div class="cmd"><span class="u">root@marude</span>:~$ cat 07_frost.txt</div>
+        <h2><span class="gen">07</span>7代目｜Frost <span class="chip">[ 最新 ]</span> <span class="newbadge">NEW!</span></h2>
+        <p class="body">この人はすごい。
+これしか言えない。</p>
+        <div class="endline">&gt; EOF_</div>
+      </div>
+    </section>
+
+  </main>
+
+  <section class="log">
+    <h3>$ cat update.log</h3>
+    <ul>
+      <li><b>2026.11.24</b>サイト開設。ドメイン取れた。</li>
+      <li><b>2026.11.24</b>7代目 Frost 追加。</li>
+      <li><b>2026.11.24</b>3代目は AL だったので修正。</li>
+      <li><b>2026.11.24</b>5代目 れい、いなくなったので記録。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <span class="skull">💀</span> root@marude-disco:~$ exit<br>
+    &gt; connection closed. <b>まるでディスコだな.com</b>
+  </footer>
+</div>
+
+<script>
+  // matrix-style rain (lightweight)
+  const cv = document.getElementById('rain'), ctx = cv.getContext('2d');
+  const chars = 'アイウエオカキクケコサシスセソタチツテト0123456789$#@*+=<>|';
+  let cols, drops;
+  function size(){
+    cv.width = innerWidth; cv.height = innerHeight;
+    cols = Math.floor(cv.width / 22);
+    drops = Array.from({length: cols}, () => Math.floor(Math.random() * -40));
+  }
+  size(); addEventListener('resize', size);
+  ctx.font = '15px monospace';
+  setInterval(() => {
+    ctx.fillStyle = 'rgba(2,6,4,0.16)'; ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.fillStyle = '#33ff66';
+    for (let i = 0; i < cols; i++){
+      const ch = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(ch, i * 22, drops[i] * 22);
+      if (drops[i] * 22 > cv.height && Math.random() > 0.976) drops[i] = Math.floor(Math.random() * -20);
+      drops[i]++;
+    }
+  }, 66);
+</script>
+</body>
+</html>
