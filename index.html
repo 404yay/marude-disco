@@ -138,15 +138,6 @@
   .openlink{font-family:var(--mono);font-size:12.5px;color:var(--ac,var(--grn));
     text-decoration:none;border-bottom:1px dashed var(--ac,var(--grn))}
   .openlink:hover{color:#fff}
-  .omikuji{margin-top:52px;border:1px dashed var(--line);background:rgba(0,0,0,.3);padding:18px 22px}
-  .omikuji h3{font-family:var(--mono);font-weight:400;font-size:15px;color:var(--grn);margin-bottom:10px}
-  .omi-out{font-size:15px;color:var(--txt);min-height:2.6em}
-  .omi-out .rank{font-family:var(--mono);color:var(--amb);font-size:19px;margin-right:10px}
-  #omiBtn{font-family:var(--mono);font-size:14px;color:#0a0f0a;background:var(--grn);
-    border:none;padding:6px 22px;cursor:pointer;letter-spacing:.1em;margin-top:8px}
-  #omiBtn:hover{background:#7dff9e}
-  #omiBtn:active{transform:translateY(1px)}
-
   footer{margin-top:58px;font-family:var(--mono);font-size:13px;color:var(--grn-dim);line-height:2;text-align:left}
   footer .skull{font-size:20px}
   footer b{color:var(--grn);font-weight:400}
@@ -301,12 +292,6 @@ VALORANTが大好き。
 
   </main>
 
-  <section class="omikuji">
-    <h3>$ ./omikuji.sh</h3>
-    <p class="omi-out" id="omiOut">// ボタンを押すと今日の運勢が出る。何回でも引ける。自己責任。</p>
-    <button id="omiBtn" type="button">[ 引く ]</button>
-  </section>
-
   <section class="log">
     <h3>$ cat todo.txt</h3>
     <ul>
@@ -324,7 +309,7 @@ VALORANTが大好き。
       <li><b>2026.11.24</b>3代目は AL だったので修正。</li>
       <li><b>2026.11.24</b>5代目 れい、いなくなったので記録。</li>
       <li><b>2026.11.25</b>5代目 れいの記録を手配書に差し替え。</li>
-      <li><b>2026.11.25</b>メンバー専用ページとおみくじ追加。全部手で書いた。</li>
+      <li><b>2026.11.25</b>メンバー専用ページ追加。全部手で書いた。</li>
     </ul>
   </section>
 
@@ -356,23 +341,6 @@ VALORANTが大好き。
       drops[i]++;
     }
   }, 66);
-</script>
-<script>
-  // omikuji — hand-written fortunes, no library, no tracking
-  const FORTUNES = [
-    ['大吉', 'バグが勝手に直る日。調子に乗っていい。'],
-    ['中吉', 'まあまあの日。コーヒーでも飲め。'],
-    ['小吉', '小さく勝てる。油断はするな。'],
-    ['吉', '普通。それが一番強い。'],
-    ['末吉', 'なんか起きる。楽しめ。'],
-    ['凶', '今日は寝てろ。マジで。'],
-    ['大凶', 'ログイン率が伝説級になる日。何も触るな。']
-  ];
-  const out = document.getElementById('omiOut');
-  document.getElementById('omiBtn').addEventListener('click', () => {
-    const f = FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
-    out.innerHTML = '<span class="rank">' + f[0] + '</span>' + f[1];
-  });
 </script>
 </body>
 </html>
