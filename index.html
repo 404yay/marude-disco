@@ -131,6 +131,22 @@
   .gone .body{color:#b9cdbf}
   .ace{border-color:var(--ac);box-shadow:0 0 0 1px rgba(0,0,0,.6), 0 14px 34px rgba(0,0,0,.5), 0 0 34px var(--glow)}
 
+  .members .card{--tilt:0deg;transform:rotate(var(--tilt))}
+  .members .card:nth-child(odd){--tilt:-.35deg}
+  .members .card:nth-child(even){--tilt:.35deg}
+  .members .card:hover{transform:rotate(var(--tilt)) translateY(-3px)}
+  .openlink{font-family:var(--mono);font-size:12.5px;color:var(--ac,var(--grn));
+    text-decoration:none;border-bottom:1px dashed var(--ac,var(--grn))}
+  .openlink:hover{color:#fff}
+  .omikuji{margin-top:52px;border:1px dashed var(--line);background:rgba(0,0,0,.3);padding:18px 22px}
+  .omikuji h3{font-family:var(--mono);font-weight:400;font-size:15px;color:var(--grn);margin-bottom:10px}
+  .omi-out{font-size:15px;color:var(--txt);min-height:2.6em}
+  .omi-out .rank{font-family:var(--mono);color:var(--amb);font-size:19px;margin-right:10px}
+  #omiBtn{font-family:var(--mono);font-size:14px;color:#0a0f0a;background:var(--grn);
+    border:none;padding:6px 22px;cursor:pointer;letter-spacing:.1em;margin-top:8px}
+  #omiBtn:hover{background:#7dff9e}
+  #omiBtn:active{transform:translateY(1px)}
+
   footer{margin-top:58px;font-family:var(--mono);font-size:13px;color:var(--grn-dim);line-height:2;text-align:left}
   footer .skull{font-size:20px}
   footer b{color:var(--grn);font-weight:400}
@@ -151,6 +167,7 @@
 &gt; boot marude-disco.sys ............ <span class="ok">[ OK ]</span>
 &gt; loading members .................. <span class="ok">[ 7 FOUND ]</span>
 &gt; fake accounts .................... <span class="ok">[ 0 ]</span>
+&gt; member pages ..................... <span class="ok">[ 7 READY ]</span>
 &gt; status ........................... <span class="ok">ALL REAL</span></div>
 
   <header>
@@ -158,7 +175,7 @@
     <h1>まるで<span class="neon glitch" data-text="ディスコ">ディスコ</span>だな<br>｜本物紹介</h1>
     <p class="sub">1代目から7代目まで、本物だけを紹介する。</p>
     <div class="meta">DOMAIN : <b>まるでディスコだな.com</b><br>
-    UPDATED : <b>2026.11.24</b> <span class="cursor"></span></div>
+    UPDATED : <b>2026.11.25</b> <span class="cursor"></span></div>
     <div class="counter">ACCESS COUNTER : <span class="digits"><i>0</i><i>0</i><i>0</i><i>4</i><i>0</i><i>4</i></span> — あなたは 404 人目の訪問者です</div>
     <div class="ticker"><div>root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b> root@marude-disco:~$ whoami <b>//</b> HONMONO ONLY <b>//</b>&nbsp;</div></div>
   </header>
@@ -185,7 +202,7 @@ drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
 どこに行ったのか誰も知らない。
 消息不明、連絡不明、存在感不明。
 初代なのにログイン率が伝説級。</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/shodai.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -200,7 +217,7 @@ drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
 最近「プログラミング頑張ってる」とか言ってるけど、普通にサボってる説ある。
 口ではプログラマー、行動はニート。
 そろそろ本気出せｗｗｗ</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/negami.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -214,7 +231,7 @@ drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
 なんかあったらすぐ喧嘩するけどね。
 クソいい身内や。
 まるでディスコだなをバカにする奴いたらすぐ守ってくれる。</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/al.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -230,7 +247,7 @@ drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
 なんだかんだ仕事はする。
 バグが出たら？ とりあえず直す。
 直らなかったら？ 泣きながら直す。</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/404.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -249,7 +266,7 @@ drwxr-xr-x  2 root root 4096 Nov 24 23:11 <b style="color:var(--cyn)">.</b>
 
 見つけたらすぐ俺に言って。
 Discord：vs2s</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/rei.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -266,7 +283,7 @@ Discord：vs2s</p>
 VALORANTが大好き。
 プログラミングの勉強も頑張れ。
 あと、たまには脳みそも起動してください。</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/kagekiha.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
@@ -278,11 +295,26 @@ VALORANTが大好き。
         <h2><span class="gen">07</span>7代目｜Frost <span class="chip">[ 最新 ]</span> <span class="newbadge">NEW!</span></h2>
         <p class="body">この人はすごい。
 これしか言えない。</p>
-        <div class="endline">&gt; EOF_</div>
+        <div class="endline">&gt; EOF — <a class="openlink" href="members/frost.html">[ 専用ページを開く ]</a></div>
       </div>
     </section>
 
   </main>
+
+  <section class="omikuji">
+    <h3>$ ./omikuji.sh</h3>
+    <p class="omi-out" id="omiOut">// ボタンを押すと今日の運勢が出る。何回でも引ける。自己責任。</p>
+    <button id="omiBtn" type="button">[ 引く ]</button>
+  </section>
+
+  <section class="log">
+    <h3>$ cat todo.txt</h3>
+    <ul>
+      <li><b>TODO</b>リンク集つくる（気が向いたら）</li>
+      <li><b>TODO</b>気が向いたらまた何か増やす</li>
+      <li><b>DONE</b>メンバー専用ページ（2026.11.25）</li>
+    </ul>
+  </section>
 
   <section class="log">
     <h3>$ cat update.log</h3>
@@ -292,6 +324,7 @@ VALORANTが大好き。
       <li><b>2026.11.24</b>3代目は AL だったので修正。</li>
       <li><b>2026.11.24</b>5代目 れい、いなくなったので記録。</li>
       <li><b>2026.11.25</b>5代目 れいの記録を手配書に差し替え。</li>
+      <li><b>2026.11.25</b>メンバー専用ページとおみくじ追加。全部手で書いた。</li>
     </ul>
   </section>
 
@@ -323,6 +356,23 @@ VALORANTが大好き。
       drops[i]++;
     }
   }, 66);
+</script>
+<script>
+  // omikuji — hand-written fortunes, no library, no tracking
+  const FORTUNES = [
+    ['大吉', 'バグが勝手に直る日。調子に乗っていい。'],
+    ['中吉', 'まあまあの日。コーヒーでも飲め。'],
+    ['小吉', '小さく勝てる。油断はするな。'],
+    ['吉', '普通。それが一番強い。'],
+    ['末吉', 'なんか起きる。楽しめ。'],
+    ['凶', '今日は寝てろ。マジで。'],
+    ['大凶', 'ログイン率が伝説級になる日。何も触るな。']
+  ];
+  const out = document.getElementById('omiOut');
+  document.getElementById('omiBtn').addEventListener('click', () => {
+    const f = FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
+    out.innerHTML = '<span class="rank">' + f[0] + '</span>' + f[1];
+  });
 </script>
 </body>
 </html>
